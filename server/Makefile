@@ -11,3 +11,6 @@ run:
 
 build:
 	docker build -t jenkins_server .
+
+logs:
+	docker logs -f jenkins_server

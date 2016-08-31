@@ -7,8 +7,8 @@ RUN apt-get update && apt-get install -y software-properties-common
 RUN add-apt-repository ppa:openjdk-r/ppa && apt-get update
 RUN apt-get install -y openssh-server openjdk-7-jre wget iproute2
 RUN apt-get install -y unzip
-RUN wget -O /home/jenkins_worker/swarm-client-1.22-jar-with-dependencies.jar \
-    http://repo.jenkins-ci.org/releases/org/jenkins-ci/plugins/swarm-client/1.22/swarm-client-1.22-jar-with-dependencies.jar
+RUN wget -O /home/jenkins_worker/swarm-client-2.2-jar-with-dependencies.jar \
+    http://repo.jenkins-ci.org/releases/org/jenkins-ci/plugins/swarm-client/2.2/swarm-client-2.2-jar-with-dependencies.jar
 COPY startup.sh /usr/bin/startup.sh
 RUN chmod +x /usr/bin/startup.sh
 ENTRYPOINT ["/usr/bin/startup.sh"]
